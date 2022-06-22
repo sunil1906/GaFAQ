@@ -1,0 +1,144 @@
+.delete-form{
+	display : inline;
+}
+#homeBody{
+	margin-left: 1.5em;
+	margin-right: 1.5em;
+}
+
+#homeEachQuestion{
+	margin : 1.5em;
+	
+}
+
+#leftHome{
+	margin-top:2em;
+	font-size: 1.15em;
+}
+
+#qtu{
+	margin-left: 1.5em;
+	margin-bottom: 2em;
+}
+
+.askAQuestion{
+	margin-left: 3em;
+}
+.col-md-1 div {
+	padding-left: 1.3em; 
+	border-left: 4px solid #f39c12;
+  
+}
+
+
+#outerofeachquestion{
+	border: 1px solid black;
+}
+
+.thumbnail{
+padding-left: 2em;
+}
+
+.answerspage{
+	border-bottom:  1px solid black;
+	padding-bottom: 1.25em;
+	padding-top: 1.25em;
+}
+
+.editDelete{
+	display: inline-block;
+}
+
+#noOfAnswers{
+	margin-left: 7px;
+	border-radius: 22px;
+    background-color: #1abc9c;
+    color: #fff;
+    border: none;
+    width: 46px;
+    height: 46px;
+    display: block;
+    text-align: center;
+    line-height: 3.3;
+    margin-bottom: 15px;
+}
+
+#googleTrans{
+	padding-top: 1.5em;
+	padding-left: 2em;
+}
+
+#profilePic{
+	height:60px; 
+	width:60px; 
+	border-radius: 50%; 
+}
+
+.thumbnail a>img, .thumbnail>img{
+	margin: 0;
+}
+
+.glyphicon-home:before{
+	font-size: 1.5em;
+}
+
+#homeIcon{
+	font-size: 1.5em;
+}
+
+.glyphicon-info-sign  {
+	font-size: 1.5em;
+}
+
+.glyphicon-envelope {
+	font-size: 1.5em;
+}
+
+.glyphicon-book {
+	font-size: 1.5em;
+}
+
+#aboutus{
+	text-align: center;
+}
+
+#contactus{
+	padding-left: 5em;
+	padding-right: 5em;
+}
+
+.glyphicon-earphone{
+	font-size: 0.7em;
+}
+
+.headerIcons{
+	font-size: 1.2em;
+}
+
+#hometag{
+	font-size: 0.9em;
+}
+
+#profilePicHeader{
+	height:30px; 
+	width:30px; 
+	border-radius: 50%; 
+}
+
+.glyphicon-heart{
+	font-size: 1.5em;
+}
+
+#profilePicUserPage{
+	height:130px; 
+	width:130px; 
+	border-radius: 50%; 
+}
+
+.userPage{
+	margin-top: 5em;
+}
+
+#profileQuestions{
+	margin-top: 5em;
+}

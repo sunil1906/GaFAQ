@@ -1,0 +1,20 @@
+<%- include("../partials/header.ejs") %>
+
+<div class="container">
+	<div class="row">
+		<div style="width:30% ; margin :20px auto">
+			<h1 style="text-align:center">Add an answer to</h1> <p><%=question.question%></p>
+			<form action ="/home/<%=question._id%>/answers" method="POST">
+				<div class="form-group">
+					<textarea class="form-control" type="text" name="answer[answer]" placeholder="Your answer goes here..." rows="4" cols="100" required></textarea> 
+				</div>
+
+				<div class="form-group">
+					<button class="btn btn-lg btn-primary btn-block">Submit!</button>
+				</div>	
+			</form>
+			<a href="/home/<%=question._id%>">Go back</a>
+		</div>
+	</div>	
+</div>
+<%- include("../partials/footer.ejs") %>

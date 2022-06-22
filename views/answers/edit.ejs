@@ -1,0 +1,21 @@
+<%- include("../partials/header.ejs") %>
+
+<div class = container>
+	<div class="row">
+		<h1 style="text-align: center;"> Edit your Answer here </h1>
+		<div style="width: 70%; margin: 20px auto;">
+			<form action="/home/<%=question_id%>/answers/<%=answer._id%>?_method=PUT" method="POST">
+				
+				<div class="form-group">
+					<textarea class="form-control" type="text" name="answer[answer]" rows="4" cols="50" required><%=answer.answer%></textarea> 
+				</div>
+				<div class="form-group">
+					<button class="btn btn-lg btn-primary btn-block">Submit!</button>
+				</div>
+			</form>	
+			<a href="/home/<%=question_id%>"> Go Back </a>		
+		</div>
+	</div>
+</div>	
+
+<%- include ("../partials/footer.ejs") %>

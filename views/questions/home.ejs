@@ -1,0 +1,97 @@
+<%- include("../partials/header.ejs") %>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+	<header class = "jumbotron text-center" >
+		<div class = "container">
+			<h1> Welcome to GaFAQ! </h1>
+			<p>View most asked questions from all over the world</p>
+		</div>
+	</header>
+<div>
+	<div class="row">
+		<div class="col-md-2" id = "homeBody">
+			<div >
+				<a class = "btn btn-primary btn-lg askAQuestion" href="/home/new"> <span class="glyphicon glyphicon-plus" aria-hidden="true"> </span> Ask a Question </a>
+			</div>
+
+			<div id="googleTrans">
+				<label>Choose you Language</label>
+				<div id="google_translate_element"></div>
+
+				<script type="text/javascript">
+				function googleTranslateElementInit() {
+				  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+				}
+				</script>
+			</div>
+
+			<div id="leftHome">
+				<div id="qtu">
+					<span class="glyphicon glyphicon-home" aria-hidden="true">  </span><a href="/home"><span> Home</span></a>
+				</div>
+				<div id="qtu"> 
+					<span class="glyphicon glyphicon-info-sign" aria-hidden="true"> </span> <a href="/aboutUs"> About Us</a>
+				</div>
+				<div id="qtu">
+					<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>  <a href="/contactUs"> Contact Us</a>
+				</div>
+				<div id="qtu">
+					<span class="glyphicon glyphicon-book" aria-hidden="true"></span>  <a href="/help"> Help</a>
+				</div>
+				
+			</div>
+		</div>
+		<div class="col-md-7" id = "homeBody">
+			<div >
+				<% for(var i=0;i<questions.length; i++){ %>	
+					<div id="outerofeachquestion">
+						<div id="homeEachQuestion">
+							<%if(questions[i].userProfile){%>	
+								 
+								<a href="/home/user/<%=questions[i].author.id%>"><img id="profilePic" src="<%=questions[i].userProfile%>"></a>
+							<%} else{%>
+
+								<a href="/home/user/<%=questions[i].author.id%>">
+									 <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+									  <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+									  <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+									  <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+									</svg>
+								</a>
+	
+							<%}%>
+
+							<h3> <b><%=questions[i].question%></b> </h3>
+							
+							<p class="pull-right" ><b> Answers &nbsp&nbsp<span id="noOfAnswers" ><%=questions[i].answers.length%></span></b></p>
+							<p>Asked by: <a href="/home/user/<%=questions[i].author.id%>"><%=questions[i].author.username%></a></p>
+							<p>Asked on <%= questions[i].date.toDateString()%> in <h4>Tags: <b><%= questions[i].tags %></b></h4></p>
+							<a href="/home/<%= questions[i]._id%>" class="btn btn-primary"> View Answers <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+							
+					</div>
+					</div>
+				<% } %>
+			</div>			
+		</div>
+		<div class="col-md-1" id = "homeBody"> 
+			<div id="questionsUsersAnswers">
+				<h4>Questions</h4>
+				<p><%=questions.length%></p>
+			</div>
+			<div id="questionsUsersAnswers">
+				<h4>Answers</h4>
+				<p><%=answers.length%></p>				
+			</div>			
+			<div id="questionsUsersAnswers"> 
+				<h4>users</h4>
+				<p><%=users.length%></p>				
+			</div>
+
+		</div>
+	</div>
+
+</div>
+
+
+<%- include ("../partials/footer.ejs") -%>

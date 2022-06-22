@@ -1,0 +1,37 @@
+<%-include("./partials/header.ejs")%>
+
+<div class = container>
+	<div class="row">
+		
+		<h1 style="text-align: center;"><span class="glyphicon glyphicon-earphone" aria-hidden="true">  </span> Contact Us </h3>
+		<b><p id  ="contactus">We understand the importance of approaching each work integrally and believe in the power of simple and easy communication. Feel free to contact us for any questions or if you need any help or services ! Please provide a detailed explanation of your problem.</p></b>
+		<div style="width: 30%; margin: 20px auto;">
+			<form action="/contactUs" method="POST">
+				<div class="form-group">
+					<label>Name</label>
+					<input class="form-control" type="text" name="name" placeholder="Name" required>
+				</div>
+				<div class="form-group">
+					<label>Email</label>
+					<input class="form-control" type="text" name="email" placeholder="E-Mail" required>
+				</div>
+				<div class="form-group">
+					<label>Phone Number</label>
+					<input class="form-control" type="Number" name="phoneNumber" placeholder="Phone Number" required>
+				</div>
+				<div class="form-group">
+					<label>Subject</label>
+					<input class="form-control" type="text" name="subject" placeholder="Subject" required>
+				</div>			
+				<div class="form-group">
+					<label>Your message</label>
+					<textarea class="form-control" type="text" name="question[question]" placeholder="Enter your message here..." rows="4" cols="50" required></textarea> 
+				</div>	
+				<div class="form-group">
+					<button class="btn btn-lg btn-primary btn-block">Submit!</button>
+				</div>
+			</form>		
+		</div>
+	</div>
+</div>	
+<%-include("./partials/footer.ejs")%>

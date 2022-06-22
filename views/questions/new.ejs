@@ -1,0 +1,28 @@
+<%- include("../partials/header.ejs") %>
+
+<div class = container>
+	<div class="row">
+		<h1 style="text-align: center;"> Ask your Question here </h1>
+		<div style="width: 70%; margin: 20px auto;">
+			<form action="/home" method="POST">
+				
+				<div class="form-group">
+					<label>Question</label>
+					<textarea class="form-control" type="text" name="question[question]" placeholder="Your question goes here..." rows="4" cols="50" required></textarea> 
+				</div>
+
+				<div class="form-group">
+					<label>Tag</label>
+					<input class="form-control" type="text" name="question[tags]" placeholder="Add a Tag related to question..." required ></input> 
+				</div>
+
+				<div class="form-group">
+					<button class="btn btn-lg btn-primary btn-block">Submit!</button>
+				</div>
+			</form>	
+			<a href="/home"> Go Back </a>		
+		</div>
+	</div>
+</div>	
+
+<%- include ("../partials/footer.ejs") -%>
